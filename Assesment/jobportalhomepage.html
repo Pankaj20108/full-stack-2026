@@ -3,180 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <title>CareerConnect - Find the Right Job. Build Your Future.</title>
-
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f6f8;
-        }
-
-        header {
-            background-color: #1e88e5;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 10px;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        section {
-            padding: 20px;
-            background: white;
-            margin: 15px;
-            border-radius: 6px;
-        }
-
         h1 { font-size: 2em; }
         h2 { font-size: 1.5em; }
         h3 { font-size: 1.2em; }
-
-        hr {
-            border: none;
-            height: 1px;
-            background: #ddd;
-            margin: 20px 0;
-        }
-
-        form input, form select {
-            padding: 8px;
-            margin-right: 5px;
-        }
-
-        button {
-            padding: 8px 12px;
-            background-color: #1e88e5;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        button:hover {
-            background-color: #1565c0;
-        }
-
+        p { font-size: 1em; }
+        hr { margin: 20px 0; }
         .jobs {
             display: flex;
+            flex-direction: row;
             gap: 20px;
-            overflow-x: auto;
+            overflow-x: auto; 
         }
-
         .job-card {
             min-width: 250px;
             border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 6px;
-            background: #fafafa;
-            transition: transform 0.2s;
-        }
-
-        .job-card:hover {
-            transform: scale(1.03);
-        }
-
-        footer {
-            background-color: #1e88e5;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-
-        footer a {
-            color: #ffeb3b;
-            text-decoration: none;
+            padding: 10px;
+            border-radius: 4px;
         }
     </style>
 </head>
-
 <body>
-
-<header>
-    <h1>CareerConnect</h1>
-    <p>Find the right job. Build your future.</p>
-
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Companies</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section>
-    <h1>Find Your Dream Job Today</h1>
-    <p>CareerConnect helps students and professionals find jobs and connect with top companies easily.</p>
-
-    <form>
-        <input type="text" placeholder="Search job, skill or company">
-        <select>
-            <option>Select Location</option>
-            <option>City</option>
-            <option>Remote</option>
-        </select>
-        <button>Search</button>
-    </form>
-</section>
-
-<section>
-    <h2>Latest Job Openings</h2>
-
-    <div class="jobs">
-        <div class="job-card">
-            <h3>Web Developer</h3>
-            <p>ABC Tech</p>
-            <p>Remote | Full Time</p>
-            <button>Apply Now</button>
+    <header>
+        <div>
+            <h1>CareerConnect</h1>
+            <p>Find the right job. Build your future.</p>
         </div>
-
-        <div class="job-card">
-            <h3>Marketing Specialist</h3>
-            <p>XYZ Corp</p>
-            <p>New York | Full Time</p>
-            <button>Apply Now</button>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Companies</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <section>
+        <h1>Find Your Dream Job Today</h1>
+        <p>CareerConnect is a simple job portal where students and professionals can search for jobs, apply easily, and connect with top companies. We help you take the first step towards your career.</p>
+        <form onsubmit="searchJobs(); return false;">
+            <input type="text" placeholder="Search jobs by title, skill, or company">
+            <select>
+                <option value="">Select Location</option>
+                <option value="city">City</option>
+                <option value="remote">Remote</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+    </section>
+    <hr>
+    <section>
+        <h2>Popular Job Categories</h2>
+        <p>Explore jobs based on your interest and skills.</p>
+        <div>
+            <div>Software & IT Jobs</div>
+            <div>Marketing & Sales</div>
+            <div>Finance & Accounting</div>
+            <div>Design & Creative</div>
+            <div>HR & Administration</div>
+            <div>Internship & Freshers Jobs</div>
         </div>
-
-        <div class="job-card">
-            <h3>Finance Analyst</h3>
-            <p>Finance Ltd</p>
-            <p>Remote | Part Time</p>
-            <button>Apply Now</button>
+    </section>
+    <hr>
+    <section>
+        <h2>Latest Job Openings</h2>
+        <div class="jobs">
+            <div class="job-card">
+                <h3>Web Developer</h3>
+                <p>Company Name: ABC Tech</p>
+                <p>Location: Remote</p>
+                <p>Job Type: Full Time</p>
+                <button onclick="applyNow('Web Developer')">Apply Now</button>
+            </div>
+            <div class="job-card">
+                <h3>Marketing Specialist</h3>
+                <p>Company Name: XYZ Corp</p>
+                <p>Location: New York</p>
+                <p>Job Type: Full Time</p>
+                <button onclick="applyNow('Marketing Specialist')">Apply Now</button>
+            </div>
+            <div class="job-card">
+                <h3>Finance Analyst</h3>
+                <p>Company Name: Finance Ltd</p>
+                <p>Location: Remote</p>
+                <p>Job Type: Part Time</p>
+                <button onclick="applyNow('Finance Analyst')">Apply Now</button>
+            </div>
+            <div class="job-card">
+                <h3>Graphic Designer</h3>
+                <p>Company Name: Creative Inc</p>
+                <p>Location: Los Angeles</p>
+                <p>Job Type: Full Time</p>
+                <button onclick="applyNow('Graphic Designer')">Apply Now</button>
+            </div>
         </div>
-
-        <div class="job-card">
-            <h3>Graphic Designer</h3>
-            <p>Creative Inc</p>
-            <p>Los Angeles | Full Time</p>
-            <button>Apply Now</button>
+    </section>
+    <hr>
+    <section>
+        <h2>Why CareerConnect?</h2>
+        <div>
+            <div>
+                <h3>Easy job search and apply process</h3>
+            </div>
+            <div>
+                <h3>Trusted companies</h3>
+            </div>
+            <div>
+                <h3>Jobs for freshers and experienced candidates</h3>
+            </div>
+            <div>
+                <h3>Free registration for job seekers</h3>
+            </div>
         </div>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2026 CareerConnect. All Rights Reserved.</p>
-    <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">Help</a>
-</footer>
+    </section>
+    <hr>
+    <section>
+        <h2>About CareerConnect</h2>
+        <p>CareerConnect is a student-friendly job portal designed to connect job seekers with employers. Our goal is to make job searching simple, fast, and accessible for everyone.</p>
+    </section>
+    <hr>
+    <section>
+        <h2>Contact Us</h2>
+        <p>Email: support@careerconnect.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Location: India</p>
+    </section>
+    <hr>
+    <footer>
+        <p>&copy; 2026 CareerConnect. All Rights Reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Help</a>
+    </footer>
 
 </body>
 </html>
