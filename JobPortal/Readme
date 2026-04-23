@@ -1,0 +1,152 @@
+# 🚀 JobPortal
+
+Welcome to **JobPortal** — a full-stack job portal project with a Java Spring Boot backend and a React-based frontend.
+
+---
+
+## 📌 Project Overview
+
+This project helps users:
+
+- 🔎 Browse available jobs
+- 🧠 Search jobs by keyword
+- 📝 Save job preferences
+- 🎯 Get tailored/recommended jobs
+- ✏️ Edit existing job listings
+- 🗑️ Delete jobs from the portal
+
+It is split into two main parts:
+
+- ⚙️ `job-backend` (Spring Boot REST API + MySQL)
+- 🎨 `job-frontend` (React via CDN + HTML/CSS/JS)
+
+---
+
+## 🗂️ Folder Structure
+
+```text
+JobPortal/
+├── job-backend/           # Spring Boot backend
+│   ├── src/
+│   ├── pom.xml
+│   ├── mvnw
+│   └── README.md
+├── job-frontend/          # Frontend app
+│   ├── index.html
+│   ├── jobs.html
+│   ├── tailored.html
+│   ├── index.js
+│   ├── jobs.js
+│   ├── tailored.js
+│   ├── api.js
+│   ├── style.css
+│   └── README.md
+└── README.md              # You are here
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### ⚙️ Backend (`job-backend`)
+- ☕ Java 17
+- 🌱 Spring Boot
+- 🗃️ Spring Data JPA
+- 🐬 MySQL (main DB)
+- 🧪 H2 (tests)
+- 📦 Maven
+
+### 🎨 Frontend (`job-frontend`)
+- 🌐 HTML5
+- 🎨 CSS3
+- ⚛️ React 18 (CDN)
+- 🧩 ReactDOM + Babel Standalone
+- 🔗 Fetch API
+
+---
+
+## 🔌 Backend API (Quick List)
+
+- `GET /api/jobs`
+- `GET /api/jobs/search?keyword=java`
+- `POST /api/jobs`
+- `PUT /api/jobs/{id}`
+- `DELETE /api/jobs/{id}`
+- `POST /api/preferences`
+- `GET /api/recommendations/{preferenceId}`
+
+---
+
+## 🚀 How to Run the Project
+
+## 1️⃣ Run Backend
+
+From `job-backend` folder:
+
+```bash
+./mvnw spring-boot:run
+```
+
+Backend runs on:
+- `http://localhost:8080`
+
+Set DB variables in PowerShell before running:
+
+```powershell
+$env:DB_URL="jdbc:mysql://localhost:3306/job_portal"
+$env:DB_USERNAME="root"
+$env:DB_PASSWORD="your_mysql_password"
+```
+
+---
+
+## 2️⃣ Run Frontend
+
+Open files from `job-frontend`:
+
+- 🏠 `index.html`
+- 💼 `jobs.html`
+- 🎯 `tailored.html`
+
+You can open directly in browser, or use a local server (recommended) for smoother development.
+
+---
+
+## ✅ Features
+
+- 📋 Job listing page
+- 🔍 Keyword-based search
+- 🧪 Filter-ready frontend flow
+- 🧠 Tailored job recommendation based on user preference
+- 🔗 Frontend-backend integration through REST APIs
+
+---
+
+## 🧪 Run Tests (Backend)
+
+```bash
+./mvnw test
+```
+
+---
+
+## 🙌 Contribution
+
+Want to improve this project?
+
+- 🍴 Fork the repo
+- 🌿 Create a branch
+- ✅ Commit your changes
+- 📬 Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is for learning and development purposes.
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a **star** on GitHub! 🌟
