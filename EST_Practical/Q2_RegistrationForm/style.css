@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  width: 300px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+}
+
+button {
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
